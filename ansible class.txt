@@ -1,0 +1,72 @@
+
+
+
+
+
+WHAT IA ANSIBLE ?
+
+It is one of the Configuration Management Tool.
+
+There are some other Configuration Management Tool other than ansible like chef,puppet,etc..
+
+
+
+WHY ANSIBLE ?
+
+The same task must be repeated multiple times.Moreover, humans are prone to make errors. 
+now these is where ansible ansible comes to rescue. and helps you become efficent operations team.
+
+with ansible, a code is written once for the installation and deploy multiple times.
+so can work on  more productive tasks rather than the repetitive ones.
+
+
+
+Because it is one of the powerful Configuration Management Tool.
+
+like --60 to 70%
+chef -- 30 to 40%
+
+It is easy to understand and easy to write the script.
+
+Ansible is a push based tool.
+Ansible it is a Agent less
+
+THERE ARE BOTH WAYS WE CAN DO.
+1)FIRSTLY THE CONNECTION OF SSH & INSTALLATION OF ANSIBLE IN MASTER SERVER.
+
+2)AFTER INSTALLING THE ANSIBLE IN MASTER SERVER AND CONNECTING USING SSH.
+
+so basically we have to  create some user .  (as ansible/bharath)
+
+The same thing in worker node also.
+
+->We have to give root permission to user that we have created in master and node server .
+
+After then using ssh-keygen.
+
+It will generate the hidden directory of .ssh.
+
+In .ssh there we can see the bothe the publice and private keys i.e id_rsa ,  id_rsa.pub .
+
+Using ssh-copy-id USER@IPADDRESS.
+
+we can transfer the publice key to node server.
+
+before we can do the copy command, We have to make the both the Master and Node servers PasswordAuthentication as YES.
+and also ChallengeResponseAuthentication NO.
+
+
+Q)why we have do.
+
+Where we can do these is in /etc/ssh/sshd_config  file  we have to make these changes.
+
+and later need to do systemctl restart sshd.
+
+Now we can do the copy command.
+
+
+
+
+
+
+
